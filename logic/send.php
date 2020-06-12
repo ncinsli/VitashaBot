@@ -1,10 +1,9 @@
 <?php
-
 class send
 {
     public $user_id;
-    public $token = '';
-    function __construct($user_id) {$this->user_id = $user_id;}
+    public $token;
+    function __construct($user_id) {$this->user_id = $user_id; $this->token = fgets(fopen(__DIR__."/token.txt", "r"), filesize(__DIR__."/token.txt")+1);} //token
     public function sendTelegram($method, $response){
         $ch = curl_init('https://api.telegram.org/bot' . $this->token . '/' . $method);  
     	curl_setopt($ch, CURLOPT_POST, 1);  
