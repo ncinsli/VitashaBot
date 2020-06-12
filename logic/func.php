@@ -43,13 +43,8 @@ class func
         return $RandDotOrg->get_integers(1,1,2);
     }
     public function info(){
-        $log = system('cat /proc/cpuinfo');
-        //$log .= system('cat /proc/meminfo');
-        //$log .= system('free');
-        //$log .= $load = sys_getloadavg();
-        //foreach($load as $k => $v) {
-        //    $log .= $k.' ---> '.$v;
-        //}
-        return $log;
+        $log = memory_get_usage();
+        $log = ($log - $log%1024)/1024;
+        return "Free - {$log}mb.";
     }
 }

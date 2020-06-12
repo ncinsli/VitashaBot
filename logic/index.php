@@ -4,10 +4,10 @@ $func = new func();
 class logic
 {
     public function new_message($send, $message){
-        $send->message($message);
-        /*if($message=="hi"){
-            $send->message("Hi");
-        }*/
+        switch ($message) {
+            default:
+                $send->message($message);
+        }
     }
     public function new_command($send, $message){
         global $func;
@@ -18,11 +18,9 @@ class logic
             case '/help':
                 $send->message("THIS IS HELP");
                 break;
-            case '/miserable':
-                $send->message("DON'T THINKS U BAD, U SO GOOD!");
-                break;
             case '/gismeteoperm':
-                $log1 = file_get_contents('https://api.openweathermap.org/data/2.5/weather?q=Perm&appid=57c5def75a9d9dbc18fb0363276b807a&units=metric');
+                $appid = '57c5def75a9d9dbc18fb0363276b807a'; //USE YOUR appid, it's free. JUST GO TO openweathermap.org
+                $log1 = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=Perm&appid={$appid}&units=metric");
                 $log = json_decode($log1, true);
                 $log3 = $log['weather'][0]['description'];
                 $log4 = $log['main']['temp'];
