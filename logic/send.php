@@ -3,7 +3,7 @@
 class send
 {
     public $user_id;
-    public $token = '1176025166:AAE4q0ngdwDFBqfVmZpa0htVNA7Dm3GBG_Q';
+    public $token = '';
     function __construct($user_id) {$this->user_id = $user_id;}
     public function sendTelegram($method, $response){
         $ch = curl_init('https://api.telegram.org/bot' . $this->token . '/' . $method);  
