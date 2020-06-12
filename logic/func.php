@@ -1,7 +1,7 @@
 <?php
 require_once 'logic/RandDotOrg.php';
 $RandDotOrg = new RandDotOrg();
-
+// @ncinsli: нихрена ты конечно Виталя кодишь
 class func
 {
     public function reboot(){
