@@ -1,14 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <pre>
+
 # VitashaBot
 Bot for tg
 
 Functions:
+<pre>
 /start - Bot say Hi to you.
 /help - Bot say help.
 /reboot - Bot reboot VPS. To use this you must do command in ssh: sudo chmod u+s /sbin/reboot
@@ -16,6 +11,4 @@ Functions:
 /gismeteoperm - Bot say the weather. To use this you must registr on openweathermap.org.
 
 When you send photo or file Bot save it on your server in folders files and photos.
-    </pre>
-</body>
-</html>
+</pre>
